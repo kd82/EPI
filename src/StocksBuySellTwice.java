@@ -12,6 +12,7 @@ public class StocksBuySellTwice {
     /*O(n) solution and O(n) space*/
 	private static double computeMaxProfit(int[] stocks) {
 		double maxTotalProfit=0.0;
+		//Loop to get the maximum profit array
 		int minPrice=Integer.MAX_VALUE;
 		List<Double> firstBuySellProfits=new ArrayList<>();
 		for(int price:stocks)
