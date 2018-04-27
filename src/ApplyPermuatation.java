@@ -17,6 +17,36 @@ public class ApplyPermuatation {
     perm.add(0);
     perm.add(1);
     applyPermuatation(perm,A);
+    int arr[] = {2, 3, 4, 5, 1};
+    int size = arr.length;
+    //variant asking for an inverse permutation
+    //With no additional space and O(N2) time
+    inversePermutation1(arr, size);
+    //With O(N) time and O(N) space
+    inversePermuatation2(arr,size);
+	}
+
+	private static void inversePermuatation2(int[] arr, int size) {
+		int[] inv=new int[size];
+		for(int i=0;i<size;++i)
+			inv[arr[i]-1]=i+1;
+		
+		for(int j=0;j<size;++j)
+			System.out.print(inv[j]+" ");
+	}
+
+	private static void inversePermutation1(int[] arr, int size) {
+		for(int i=0;i<size;++i)
+		{
+			for(int j=0;j<size;++j)
+			{
+				if(arr[j]==i+1)
+				{
+					System.out.print(j+1+" ");
+					break;
+				}
+			}
+		}
 	}
 
 	private static void applyPermuatation(List<Integer> perm, List<Integer> A) {
@@ -32,9 +62,7 @@ public class ApplyPermuatation {
     	   }
        }
        for(int i:A)
-       {
-       System.out.print(i+" ");
-       }
+         System.out.print(i+" ");
 	}
 
 }
