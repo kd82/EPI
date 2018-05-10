@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class NextPermutation {
+public class Permutations {
 
 	public static void main(String[] args) {
 		List<Integer> A=new ArrayList<Integer>();
@@ -26,11 +26,12 @@ public class NextPermutation {
 	    	System.out.print(nextPerm.get(i)+" ");
 	    }
 	    System.out.println();
-	    // 3rd permutation in an array of 4 elements starting from 1234
+	    // Compute permutations starting from 123
 	    //A clear explanation can be found in the below link
 	    //https://stackoverflow.com/questions/31216097/given-n-and-k-return-the-kth-permutation-sequence
 	 	for(int i = 0; i < 6; i++)
 	 	  kthPermutation(3, i);
+	 	kthPermutation(100, 100-1);
 	}
 
 	private static void kthPermutation(int n, int k) {
