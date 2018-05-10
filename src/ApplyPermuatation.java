@@ -5,7 +5,6 @@ import java.util.List;
 public class ApplyPermuatation {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
     List<Integer> A=new ArrayList<Integer>();
 	A.add(1);
 	A.add(2);
