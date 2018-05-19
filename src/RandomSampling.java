@@ -13,9 +13,15 @@ public class RandomSampling {
 			A.add(4);
 		System.out.println("Random Sampling:");
 		randomSampling(A,3);
+		System.out.println("\nRandom permutation:");
+		List<Integer> permutation=randomPermutation(50);
+		for(int i=0;i<50;i++)
+		{
+			System.out.print(permutation.get(i)+" ");
+		}
 	}
 
-	private static void randomSampling(List<Integer> A, int K) {
+	private static List<Integer> randomSampling(List<Integer> A, int K) {
 		Random r=new Random();
 		for(int i=0;i<A.size();i++)
 		{
@@ -25,6 +31,17 @@ public class RandomSampling {
 		{
 			System.out.print(A.get(i)+" ");
 		}
+		return A;
+	}
+	private static List<Integer> randomPermutation(int n)
+	{
+		List<Integer> permutation=new ArrayList<Integer>(n);
+		for(int i=0;i<n;++i)
+		{
+			permutation.add(i);
+		}
+		permutation=randomSampling(permutation,permutation.size());
+		return permutation;
 	}
 
 }
