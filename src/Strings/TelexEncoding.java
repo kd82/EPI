@@ -3,12 +3,12 @@ package Strings;
 public class TelexEncoding {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		char[] input={'.','b','c', 'd','e', '.',' ',' ',' ',' ', ' ', ' '};
 		telexEncoding(6, input);
 	}
 
 	private static void telexEncoding(int size, char[] input) {
+	  //TO DO more efficiently by using a mapping
 	  final String[] spelledChars={"TOD","AMMOC","KRAM NOITSEUQ","KRAM NOITAMALCXE"};
       int count=0;
 	  for(int i=0;i<size;++i){
@@ -30,7 +30,7 @@ public class TelexEncoding {
 		  --j;
 	  }
 	  for(int i=0;i<finalSize;i++){
-		  System.out.println(input[i]);
+		  System.out.print(input[i]+" ");
 	  }
 	}
 
