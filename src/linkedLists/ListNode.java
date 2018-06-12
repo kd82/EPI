@@ -32,4 +32,10 @@ public class ListNode<T> {
 	public void Delete(ListNode<T> anode){
 		anode.next=anode.next.next;
 	}
+	public void print(ListNode<T> head){
+		while(head.next!=null){
+			System.out.print(head.data+"->");
+			head=head.next;
+		}
+	}
 }

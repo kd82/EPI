@@ -1,7 +1,7 @@
 package linkedLists;
 
 
-public class mergedSortedLinkedLists {
+public class MergedSortedLinkedLists {
     public static void main(String[] args) {
     
     }
