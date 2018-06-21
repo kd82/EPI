@@ -3,7 +3,6 @@ package linkedLists;
 public class ReverseLinkedList {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ListNode<Integer> dummyHead=new ListNode<Integer>(10,null);
 		dummyHead.next=new ListNode<Integer>(55,null);
 		dummyHead.next.next=new ListNode<Integer>(11,null);
