@@ -3,8 +3,8 @@ package linkedLists;
 public class CycleDetection {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ListNode<Integer> dummyHead=new ListNode<Integer>(10,null);//head or 0
+
+		ListNode<Integer> dummyHead=ListHelper.createList(5);
 		dummyHead.next=new ListNode<Integer>(55,null);//1
 		dummyHead.next.next=new ListNode<Integer>(51,dummyHead);
 		System.out.println(hasCycle(dummyHead));

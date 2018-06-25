@@ -1,10 +1,5 @@
 package linkedLists;
-
-
 public class MergedSortedLinkedLists {
-    public static void main(String[] args) {
-    
-    }
 	public static ListNode<Integer> mergeSortedLinkedList(ListNode<Integer> L1,ListNode<Integer> L2){
 		ListNode<Integer> dummyHead=new ListNode<Integer>(0,null);
 		ListNode<Integer> current=dummyHead,p1=L1,p2=L2;
