@@ -3,14 +3,12 @@ package linkedLists;
 public class ReverseLinkedList {
 
 	public static void main(String[] args) {
-		ListNode<Integer> dummyHead=new ListNode<Integer>(10,null);
-		dummyHead.next=new ListNode<Integer>(55,null);
-		dummyHead.next.next=new ListNode<Integer>(11,null);
-		dummyHead.next.next.next=new ListNode<Integer>(9,null);
-		dummyHead.next.next.next.next=new ListNode<Integer>(9,null);
-		print(reverseList(dummyHead,5,5));
+		ListNode<Integer> dummyHead=ListHelper.createList(14);
+		ListHelper.print(dummyHead);
 		System.out.println();
-		print(reverseLinkedList(dummyHead));
+		ListHelper.print(reverseLinkedList(dummyHead));
+		System.out.println();
+		ListHelper.print(reverseList(dummyHead,1,10));
 	}
 	
 	public static ListNode<Integer> reverseList(ListNode<Integer> head,int start,int finish){
@@ -32,13 +30,6 @@ public class ReverseLinkedList {
         	subListHead.next=temp;
         }
 		return dummyHead.next;
-	}
-	public static void print(ListNode<Integer> head){
-		while(head!=null){
-			System.out.print(head.data+"->");
-			head=head.next;
-		}
-		System.out.print("null");
 	}
 	public static ListNode<Integer> reverseLinkedList(ListNode<Integer> head){
 	  ListNode<Integer> prev=null;
