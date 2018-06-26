@@ -5,9 +5,7 @@ public class ReverseLinkedList {
 	public static void main(String[] args) {
 		ListNode<Integer> dummyHead=ListHelper.createList(14);
 		ListHelper.print(dummyHead);
-		System.out.println();
 		ListHelper.print(reverseLinkedList(dummyHead));
-		System.out.println();
 		ListHelper.print(reverseList(dummyHead,1,10));
 	}
 	

@@ -5,7 +5,6 @@ public class CyclicRightShift {
 	public static void main(String[] args) {
 		ListNode<Integer> dummyHead=ListHelper.createList(10);
 		ListHelper.print(dummyHead);
-		System.out.println();
 		ListHelper.print(cyclicRightShift(dummyHead,3));
 
 	}
