@@ -5,7 +5,7 @@ public class CycleDetection {
 	public static void main(String[] args) {
 
 		ListNode<Integer> dummyHead=ListHelper.createList(5);
-		dummyHead.next=new ListNode<Integer>(55,null);//1
+		dummyHead.next=new ListNode<Integer>(55,null);
 		dummyHead.next.next=new ListNode<Integer>(51,dummyHead);
 		System.out.println(hasCycle(dummyHead));
 		ListNode<Integer> start=startOfCycle(dummyHead);
@@ -14,7 +14,7 @@ public class CycleDetection {
 		System.out.println(start==null?"No Cycle":start.data);
 	}
 
-	private static boolean hasCycle(ListNode<Integer> head) {
+	public static boolean hasCycle(ListNode<Integer> head) {
 		ListNode<Integer> slow=head;
 		ListNode<Integer> fast=head;
 		while(fast!=null && fast.next!=null){
@@ -26,7 +26,7 @@ public class CycleDetection {
 		}
 		return false;
 	}
-	private static ListNode<Integer> startOfCycle(ListNode<Integer> head) {
+	public static ListNode<Integer> startOfCycle(ListNode<Integer> head) {
 		ListNode<Integer> slow=head;
 		ListNode<Integer> fast=head;
 		while(fast!=null && fast.next!=null){
@@ -45,7 +45,7 @@ public class CycleDetection {
 		return null;
 	}
 	
-	private static ListNode<Integer> startOfCycle1(ListNode<Integer> head) {
+	public static ListNode<Integer> startOfCycle1(ListNode<Integer> head) {
 		ListNode<Integer> slow=head;
 		ListNode<Integer> fast=head;
 		while(fast!=null && fast.next!=null){

@@ -7,7 +7,7 @@ public class EvenOddMerge {
 	public static void main(String[] args) {
 		ListNode<Integer> dummyHead=ListHelper.createList(8);
 		ListHelper.print(dummyHead);
-		System.out.println("\nEven Odd Merged ");
+		System.out.println("Even Odd Merged ");
 		ListHelper.print(evenOddMerge(dummyHead));
 	}
 	private static ListNode<Integer> evenOddMerge(ListNode<Integer> L) {
