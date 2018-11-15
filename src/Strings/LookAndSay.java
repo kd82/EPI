@@ -1,4 +1,4 @@
-package Strings;
+package strings;
 
 public class LookAndSay {
 	public static void main(String[] args) {
