@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class BuildingsWithHeight {
     
-	public class BuildingWithHeight{
+	public static class BuildingWithHeight{
 		public Integer Idx;
 		public Integer Height;
 	    
@@ -16,13 +16,16 @@ public class BuildingsWithHeight {
 		}
 	}
 	
-	public static void main(String[] args) {
-
-	}
-	
 	public static Deque<BuildingWithHeight> examineBuildingsWithSunset(Iterator<Integer> buildings){
 		Deque<BuildingWithHeight> buildingsWithView=new LinkedList<>();
-		
+		int buildingIdx=0;
+		while(buildings.hasNext()){
+			Integer buildingHeight=buildings.next();
+			while(!buildingsWithView.isEmpty() && (Integer.compare(buildingHeight, buildingsWithView.getLast().Height)>=0)){
+				buildingsWithView.removeLast();
+			}
+			buildingsWithView.addLast(new BuildingWithHeight(buildingIdx++, buildingHeight));
+		}
 		return buildingsWithView;
 	}
 
