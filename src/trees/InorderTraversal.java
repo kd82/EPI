@@ -21,7 +21,7 @@ public class InorderTraversal {
 		if(root==null)
 			return;
 		
-		Deque<BinaryTreeNode> stack=new LinkedList<>();
+		Deque<BinaryTreeNode<Integer>> stack=new LinkedList<>();
 		
 		BinaryTreeNode<Integer> start=root;
 
