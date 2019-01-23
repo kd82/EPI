@@ -22,11 +22,11 @@ public class PostOrderTraversal {
 	private static void postOrderIterative(BinaryTreeNode<Integer> root) {
 		if(root==null)
 			return;
-		Deque<BinaryTreeNode> s1=new LinkedList<>();
-		Deque<BinaryTreeNode> s2=new LinkedList<>();
+		Deque<BinaryTreeNode<Integer>> s1=new LinkedList<>();
+		Deque<BinaryTreeNode<Integer>> s2=new LinkedList<>();
 		s1.addFirst(root);
 		while(!s1.isEmpty()){
-			BinaryTreeNode temp=s1.removeFirst();
+			BinaryTreeNode<Integer> temp=s1.removeFirst();
 			
 			s2.addFirst(temp);
 			
@@ -47,9 +47,9 @@ public class PostOrderTraversal {
 		private static void postOrderIterativeOneStack(BinaryTreeNode<Integer> root) {
 			if(root==null)
 				return;
-			Deque<BinaryTreeNode> s1=new LinkedList<>();
+			Deque<BinaryTreeNode<Integer>> s1=new LinkedList<>();
 			s1.addFirst(root);
-			BinaryTreeNode prev=null;
+			BinaryTreeNode<Integer> prev=null;
 			while(!s1.isEmpty()){
 				BinaryTreeNode<Integer> curr=s1.peek();
 				if(prev==null || prev.left==curr || prev.right==curr){
