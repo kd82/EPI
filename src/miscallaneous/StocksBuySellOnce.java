@@ -1,3 +1,4 @@
+package miscallaneous;
 
 public class StocksBuySellOnce {
 	public static void main(String[] args) {
