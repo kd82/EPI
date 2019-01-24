@@ -1,3 +1,4 @@
+package miscallaneous;
 
 public class Division {
 

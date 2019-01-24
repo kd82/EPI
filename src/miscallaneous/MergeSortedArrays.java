@@ -1,4 +1,4 @@
-
+package miscallaneous;
 
 public class MergeSortedArrays {
 
