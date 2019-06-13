@@ -11,4 +11,11 @@ public class BinaryTreeNode<T> {
         this.data = item;
         this.left = this.right=this.parent = null;
     }
+
+	public BinaryTreeNode(T d, BinaryTreeNode<T> left,
+			BinaryTreeNode<T> right) {
+		this.data=d;
+		this.left=left;
+		this.right=right;
+	}
 }
