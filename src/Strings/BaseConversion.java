@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package strings;
+=======
+package Strings;
+>>>>>>> c02d66d7ac0d64834bc80a5fd1e480ae0b2a4e69
 
 public class BaseConversion {
 
